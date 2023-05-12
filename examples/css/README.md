@@ -537,11 +537,11 @@ webpack 5.78.0 compiled successfully
 
 ```
 assets by chunk 4.38 KiB (name: main)
-  asset output.js 3.87 KiB [emitted] [minimized] (name: main)
+  asset output.js 3.88 KiB [emitted] [minimized] (name: main)
   asset output.css 514 bytes [emitted] (name: main)
 asset 89a353e9c515885abd8e.png 14.6 KiB [emitted] [immutable] [from: images/file.png] (auxiliary name: main)
 asset 159.output.css 53 bytes [emitted]
-Entrypoint main 4.38 KiB (14.6 KiB) = output.js 3.87 KiB output.css 514 bytes 1 auxiliary asset
+Entrypoint main 4.38 KiB (14.6 KiB) = output.js 3.88 KiB output.css 514 bytes 1 auxiliary asset
 chunk (runtime: main) 159.output.css 23 bytes
   > ./lazy-style.css ./example.js 4:0-26
   ./lazy-style.css 23 bytes [built] [code generated]

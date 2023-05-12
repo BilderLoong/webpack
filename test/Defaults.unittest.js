@@ -343,6 +343,7 @@ describe("snapshots", () => {
 		    "hotUpdateChunkFilename": "[id].[fullhash].hot-update.js",
 		    "hotUpdateGlobal": "webpackHotUpdatewebpack",
 		    "hotUpdateMainFilename": "[runtime].[fullhash].hot-update.json",
+		    "ignoreBrowserWarnings": undefined,
 		    "iife": true,
 		    "importFunctionName": "import",
 		    "importMetaName": "import.meta",
@@ -1930,6 +1931,7 @@ describe("snapshots", () => {
 			-     "trustedTypes": undefined,
 			-     "uniqueName": "webpack",
 			+     "trustedTypes": Object {
+			+       "onPolicyCreationFailure": "stop",
 			+       "policyName": "@@@Hello_World_",
 			+     },
 			+     "uniqueName": "@@@Hello World!",

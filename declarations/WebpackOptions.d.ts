@@ -163,6 +163,14 @@ export type EntryUnnamed = EntryItem;
  */
 export type Experiments = ExperimentsCommon & ExperimentsExtra;
 /**
+ * Extend configuration from another configuration (only works when using webpack-cli).
+ */
+export type Extends = ExtendsItem[] | ExtendsItem;
+/**
+ * Path to the configuration to be extended (only works when using webpack-cli).
+ */
+export type ExtendsItem = string;
+/**
  * Specify dependencies that shouldn't be resolved by webpack, but should become dependencies of the resulting bundle. The kind of the dependency depends on `output.libraryTarget`.
  */
 export type Externals = ExternalItem[] | ExternalItem;
@@ -819,6 +827,10 @@ export interface WebpackOptions {
 	 * Enables/Disables experiments (experimental features with relax SemVer compatibility).
 	 */
 	experiments?: Experiments;
+	/**
+	 * Extend configuration from another configuration (only works when using webpack-cli).
+	 */
+	extends?: Extends;
 	/**
 	 * Specify dependencies that shouldn't be resolved by webpack, but should become dependencies of the resulting bundle. The kind of the dependency depends on `output.libraryTarget`.
 	 */
@@ -2097,6 +2109,10 @@ export interface Output {
 	 */
 	hotUpdateMainFilename?: HotUpdateMainFilename;
 	/**
+	 * Ignore warnings in the browser.
+	 */
+	ignoreBrowserWarnings?: boolean;
+	/**
 	 * Wrap javascript code into IIFE's to avoid leaking into global scope.
 	 */
 	iife?: Iife;
@@ -2247,6 +2263,10 @@ export interface Environment {
  * Use a Trusted Types policy to create urls for chunks.
  */
 export interface TrustedTypes {
+	/**
+	 * If the call to `trustedTypes.createPolicy(...)` fails -- e.g., due to the policy name missing from the CSP `trusted-types` list, or it being a duplicate name, etc. -- controls whether to continue with loading in the hope that `require-trusted-types-for 'script'` isn't enforced yet, versus fail immediately. Default behavior is 'stop'.
+	 */
+	onPolicyCreationFailure?: "continue" | "stop";
 	/**
 	 * The name of the Trusted Types policy created by webpack to serve bundle chunks.
 	 */
@@ -2486,6 +2506,10 @@ export interface StatsOptions {
 	 */
 	errorsCount?: boolean;
 	/**
+	 * Space to display errors (value is in number of lines).
+	 */
+	errorsSpace?: number;
+	/**
 	 * Please use excludeModules instead.
 	 */
 	exclude?: boolean | ModuleFilterTypes;
@@ -2669,6 +2693,10 @@ export interface StatsOptions {
 	 * Suppress listing warnings that match the specified filters (they will still be counted). Filters can be Strings, RegExps or Functions.
 	 */
 	warningsFilter?: WarningFilterTypes;
+	/**
+	 * Space to display warnings (value is in number of lines).
+	 */
+	warningsSpace?: number;
 }
 /**
  * Options for the watcher.
@@ -3297,6 +3325,10 @@ export interface OutputNormalized {
 	 * The filename of the Hot Update Main File. It is inside the 'output.path' directory.
 	 */
 	hotUpdateMainFilename?: HotUpdateMainFilename;
+	/**
+	 * Ignore warnings in the browser.
+	 */
+	ignoreBrowserWarnings?: boolean;
 	/**
 	 * Wrap javascript code into IIFE's to avoid leaking into global scope.
 	 */

@@ -9,14 +9,26 @@ it("should allow to create css modules", done => {
 			expect(x).toEqual({
 				global: undefined,
 				class: prod ? "my-app-491-S" : "./style.module.css-class",
-				currentWmultiParams: prod ? "my-app-491-yK" : "./style.module.css-local12",
-				futureWmultiParams:  prod ? "my-app-491-Y4" : "./style.module.css-local14",
-				hasWmultiParams:  prod ? "my-app-491-PK" : "./style.module.css-local11",
-				matchesWmultiParams:  prod ? "my-app-491-$Y" : "./style.module.css-local9",
-				mozAnyWmultiParams:  prod ? "my-app-491-TT" : "./style.module.css-local15",
-				pastWmultiParams:  prod ? "my-app-491-P_" : "./style.module.css-local13",
-				webkitAnyWmultiParams:  prod ? "my-app-491-rT" : "./style.module.css-local16",
-				whereWmultiParams:  prod ? "my-app-491-ie" : "./style.module.css-local10",
+				currentWmultiParams: prod
+					? "my-app-491-yK"
+					: "./style.module.css-local12",
+				futureWmultiParams: prod
+					? "my-app-491-Y4"
+					: "./style.module.css-local14",
+				hasWmultiParams: prod ? "my-app-491-PK" : "./style.module.css-local11",
+				matchesWmultiParams: prod
+					? "my-app-491-$Y"
+					: "./style.module.css-local9",
+				mozAnyWmultiParams: prod
+					? "my-app-491-TT"
+					: "./style.module.css-local15",
+				pastWmultiParams: prod ? "my-app-491-P_" : "./style.module.css-local13",
+				webkitAnyWmultiParams: prod
+					? "my-app-491-rT"
+					: "./style.module.css-local16",
+				whereWmultiParams: prod
+					? "my-app-491-ie"
+					: "./style.module.css-local10",
 				local: prod
 					? "my-app-491-Zw my-app-491-yl my-app-491-J_ my-app-491-gc"
 					: "./style.module.css-local1 ./style.module.css-local2 ./style.module.css-local3 ./style.module.css-local4",
@@ -56,6 +68,48 @@ it("should allow to create css modules", done => {
 				supportsInMedia: prod
 					? "my-app-491-SQ"
 					: "./style.module.css-displayFlexInSupportsInMedia",
+				displayFlexInSupportsInMediaUpperCase: prod
+					? "my-app-491-XM"
+					: "./style.module.css-displayFlexInSupportsInMediaUpperCase",
+				keyframesUPPERCASE: prod
+					? "my-app-491-T4"
+					: "./style.module.css-localkeyframesUPPERCASE",
+				localkeyframes2UPPPERCASE: prod
+					? "my-app-491-Xi"
+					: "./style.module.css-localkeyframes2UPPPERCASE",
+				VARS: prod
+					? "--my-app-491-DJ my-app-491-ms undefined my-app-491-cU"
+					: "--./style.module.css-LOCAL-COLOR ./style.module.css-VARS undefined ./style.module.css-globalVarsUpperCase",
+				inSupportScope: prod
+					? "my-app-491-FO"
+					: "./style.module.css-inSupportScope",
+				animationName: prod
+					? "my-app-491-w3"
+					: "./style.module.css-animationName",
+				mozAnimationName: prod
+					? "my-app-491-t6"
+					: "./style.module.css-mozAnimationName",
+				myColor: prod
+					? "--my-app-491-lC"
+					: "--./style.module.css-my-color",
+				paddingLg: prod
+					? "my-app-491-FP"
+					: "./style.module.css-padding-lg",
+				paddingSm: prod
+					? "my-app-491-zE"
+					: "./style.module.css-padding-sm",
+				classLocalScope: prod
+					? "my-app-491-gz"
+					: "./style.module.css-class-local-scope",
+				inLocalGlobalScope: prod
+					? "my-app-491-Zv"
+					: "./style.module.css-in-local-global-scope",
+				classInContainer: prod
+					? "my-app-491-Gp"
+					: "./style.module.css-class-in-container",
+				deepClassInContainer: prod
+					? "my-app-491-rn"
+					: "./style.module.css-deep-class-in-container",
 			});
 		} catch (e) {
 			return done(e);
