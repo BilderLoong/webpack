@@ -320,6 +320,19 @@ Object {
     "multiple": false,
     "simpleType": "boolean",
   },
+  "cache-readonly": Object {
+    "configs": Array [
+      Object {
+        "description": "Enable/disable readonly mode.",
+        "multiple": false,
+        "path": "cache.readonly",
+        "type": "boolean",
+      },
+    ],
+    "description": "Enable/disable readonly mode.",
+    "multiple": false,
+    "simpleType": "boolean",
+  },
   "cache-store": Object {
     "configs": Array [
       Object {
@@ -1548,6 +1561,25 @@ Object {
     "multiple": false,
     "simpleType": "string",
   },
+  "module-parser-javascript-auto-dynamic-import-fetch-priority": Object {
+    "configs": Array [
+      Object {
+        "description": "Specifies global fetchPriority for dynamic import.",
+        "multiple": false,
+        "path": "module.parser.javascript/auto.dynamicImportFetchPriority",
+        "type": "enum",
+        "values": Array [
+          "low",
+          "high",
+          "auto",
+          false,
+        ],
+      },
+    ],
+    "description": "Specifies global fetchPriority for dynamic import.",
+    "multiple": false,
+    "simpleType": "string",
+  },
   "module-parser-javascript-auto-dynamic-import-mode": Object {
     "configs": Array [
       Object {
@@ -2220,6 +2252,25 @@ Object {
     "multiple": false,
     "simpleType": "string",
   },
+  "module-parser-javascript-dynamic-dynamic-import-fetch-priority": Object {
+    "configs": Array [
+      Object {
+        "description": "Specifies global fetchPriority for dynamic import.",
+        "multiple": false,
+        "path": "module.parser.javascript/dynamic.dynamicImportFetchPriority",
+        "type": "enum",
+        "values": Array [
+          "low",
+          "high",
+          "auto",
+          false,
+        ],
+      },
+    ],
+    "description": "Specifies global fetchPriority for dynamic import.",
+    "multiple": false,
+    "simpleType": "string",
+  },
   "module-parser-javascript-dynamic-dynamic-import-mode": Object {
     "configs": Array [
       Object {
@@ -2396,6 +2447,25 @@ Object {
       },
     ],
     "description": "Specifies the behavior of invalid export names in \\"import ... from ...\\".",
+    "multiple": false,
+    "simpleType": "string",
+  },
+  "module-parser-javascript-dynamic-import-fetch-priority": Object {
+    "configs": Array [
+      Object {
+        "description": "Specifies global fetchPriority for dynamic import.",
+        "multiple": false,
+        "path": "module.parser.javascript.dynamicImportFetchPriority",
+        "type": "enum",
+        "values": Array [
+          "low",
+          "high",
+          "auto",
+          false,
+        ],
+      },
+    ],
+    "description": "Specifies global fetchPriority for dynamic import.",
     "multiple": false,
     "simpleType": "string",
   },
@@ -2888,6 +2958,25 @@ Object {
       },
     ],
     "description": "Enable/disable parsing \\"import { createRequire } from \\"module\\"\\" and evaluating createRequire().",
+    "multiple": false,
+    "simpleType": "string",
+  },
+  "module-parser-javascript-esm-dynamic-import-fetch-priority": Object {
+    "configs": Array [
+      Object {
+        "description": "Specifies global fetchPriority for dynamic import.",
+        "multiple": false,
+        "path": "module.parser.javascript/esm.dynamicImportFetchPriority",
+        "type": "enum",
+        "values": Array [
+          "low",
+          "high",
+          "auto",
+          false,
+        ],
+      },
+    ],
+    "description": "Specifies global fetchPriority for dynamic import.",
     "multiple": false,
     "simpleType": "string",
   },
@@ -5121,6 +5210,12 @@ Object {
           "all",
         ],
       },
+      Object {
+        "description": "Select chunks for determining shared modules (defaults to \\"async\\", \\"initial\\" and \\"all\\" requires adding these chunks to the HTML).",
+        "multiple": false,
+        "path": "optimization.splitChunks.chunks",
+        "type": "RegExp",
+      },
     ],
     "description": "Select chunks for determining shared modules (defaults to \\"async\\", \\"initial\\" and \\"all\\" requires adding these chunks to the HTML).",
     "multiple": false,
@@ -5190,6 +5285,12 @@ Object {
           "async",
           "all",
         ],
+      },
+      Object {
+        "description": "Select chunks for determining shared modules (defaults to \\"async\\", \\"initial\\" and \\"all\\" requires adding these chunks to the HTML).",
+        "multiple": false,
+        "path": "optimization.splitChunks.fallbackCacheGroup.chunks",
+        "type": "RegExp",
       },
     ],
     "description": "Select chunks for determining shared modules (defaults to \\"async\\", \\"initial\\" and \\"all\\" requires adding these chunks to the HTML).",
@@ -5933,6 +6034,19 @@ Object {
     "multiple": false,
     "simpleType": "boolean",
   },
+  "output-environment-dynamic-import-in-worker": Object {
+    "configs": Array [
+      Object {
+        "description": "The environment supports an async import() is available when creating a worker.",
+        "multiple": false,
+        "path": "output.environment.dynamicImportInWorker",
+        "type": "boolean",
+      },
+    ],
+    "description": "The environment supports an async import() is available when creating a worker.",
+    "multiple": false,
+    "simpleType": "boolean",
+  },
   "output-environment-for-of": Object {
     "configs": Array [
       Object {
@@ -5943,6 +6057,19 @@ Object {
       },
     ],
     "description": "The environment supports 'for of' iteration ('for (const x of array) { ... }').",
+    "multiple": false,
+    "simpleType": "boolean",
+  },
+  "output-environment-global-this": Object {
+    "configs": Array [
+      Object {
+        "description": "The environment supports 'globalThis'.",
+        "multiple": false,
+        "path": "output.environment.globalThis",
+        "type": "boolean",
+      },
+    ],
+    "description": "The environment supports 'globalThis'.",
     "multiple": false,
     "simpleType": "boolean",
   },
