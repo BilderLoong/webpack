@@ -4,6 +4,7 @@
 */
 "use strict";
 
+debugger
 const cp = require("child_process");
 const path = require("path");
 const tc = require("./template-common");
@@ -51,6 +52,7 @@ const doCompileAndReplace = (args, prefix, callback) => {
 		throw new Error("Please install webpack-cli at root.");
 	}
 
+	console.log(`node ${path.resolve(__dirname, "../bin/webpack.js")} ${args} ${displayReasons} ${commonArgs}`)
 	cp.exec(`node ${path.resolve(__dirname, "../bin/webpack.js")} ${args} ${displayReasons} ${commonArgs}`, (error, stdout, stderr) => {
 		if (stderr)
 			console.log(stderr);
