@@ -4,7 +4,6 @@
 */
 "use strict";
 
-debugger
 const cp = require("child_process");
 const path = require("path");
 const tc = require("./template-common");
